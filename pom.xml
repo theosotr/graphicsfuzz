@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>uk.ac.ic.doc.multicore.oglfuzzer</groupId>
+  <artifactId>OGLTesting</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <!-- Default to UTF-8 otherwise Maven complains -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <profiles>
+    <profile>
+      <id>private</id>
+      <modules>
+        <!-- Keep in alphabetical order -->
+        <module>repos/gf-private/android-client-dep</module>
+        <module>repos/gf-private/assembly</module>
+        <module>repos/gf-private/assembly-desktop-client</module>
+        <module>repos/gf-private/common</module>
+        <module>repos/gf-private/desktop-client</module>
+        <module>repos/gf-private/generator</module>
+        <module>repos/gf-private/python</module>
+        <module>repos/gf-private/reducer</module>
+        <module>repos/gf-private/server</module>
+        <module>repos/gf-private/tester</module>
+        <module>repos/gf-private/tool</module>
+        <module>repos/gf-private/util</module>
+      </modules>
+      <activation>
+        <file>
+          <exists>repos/gf-private/assembly/pom.xml</exists>
+        </file>
+      </activation>
+    </profile>
+  </profiles>
+
+  <modules>
+    <!-- Keep in alphabetical order -->
+    <module>assembly-binaries</module>
+    <module>ast</module>
+    <module>astfuzzer</module>
+    <module>checkstyle-config</module>
+    <module>common-util</module>
+    <module>fuzzerserver</module>
+    <module>parent-all</module>
+    <module>parent-checkstyle</module>
+    <module>security</module>
+    <module>server-public</module>
+    <module>server-thrift-gen</module>
+    <module>shaders</module>
+    <module>shadersets-util</module>
+    <module>thrift</module>
+    <module>test-util</module>
+  </modules>
+
+
+</project>
