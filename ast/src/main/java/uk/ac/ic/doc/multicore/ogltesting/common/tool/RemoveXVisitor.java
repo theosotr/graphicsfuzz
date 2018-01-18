@@ -24,6 +24,7 @@ public class RemoveXVisitor extends StandardVisitor {
         hasVarX = true;
         break;
       }
+      visit(vdi);
     }
     if (hasVarX) {
       int numDecls = variablesDeclaration.getNumDecls();
